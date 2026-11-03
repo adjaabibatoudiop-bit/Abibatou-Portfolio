@@ -1,61 +1,133 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mon Portfolio</title>
-
+    <meta name="description" content="Portfolio d'Adja Abibatou Diop, étudiante en génie logiciel et administration réseau.">
+    <title>Portfolio | Adja Abibatou Diop</title>
     <link rel="stylesheet" href="style.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <script src="script.js" defer></script>
 </head>
-
 <body>
-
-    <header>
-
-        <h1 class="logo"> Aby's<em>Port</em><span><em>Folio</em></span></h1>
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class='bx bx-menu' id="menu-icon"></i>
-            <i class='bx bx-x' id="close-icon"></i>
-        </label>
-
-        <nav>
-            <a href="index.html">ACCUEIL</a>
-            <a href="about.me.html">A PROPOS</a>
-            <a href="projects.html">PROJETS</a>
-            <a href="contact.html">CONTACT</a>
-            <a href="Formations.html">FORMATIONS</a>
+    <header class="site-header">
+        <a class="logo" href="#accueil" aria-label="Aby's Portfolio, accueil">Aby's<span>Portfolio</span></a>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-links">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="navbar" aria-label="Navigation principale">
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#formations">Formations</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-
     </header>
 
-
-    <section id="home" class="home">
-
-        <div class="home-text">
-
-            <h1> Heeyy! je suis Hadja Abibatou <span>Diop</span></h1>
-            <h2> Etudiante en <span>génie logiciel </span> et <span>administration réseau</span></h2>
-            <p> Créative et rigoureuse, je transforme les idées en réalisations concrètes <br>à travers des projets qui
-                allient esthétique, fonctionnalité et sens. <br>
-                cliquez dessus pour voir mes réalisations!
-            </p>
-
-
-            <a href="projects.html" class="btn">voir mes projets </a>
-        </div>
-
-        <div class="home-img">
-            <div class="img-box">
-                <img src="https://github.com/adjaabibatoudiop-bit/Ma.page.html/blob/main/aby'pic.jpg?raw=true"
-                    alt="Profile">
+    <main>
+        <section id="accueil" class="home section-shell">
+            <div class="home-text">
+                <p class="eyebrow">Bienvenue dans mon univers</p>
+                <h1>Bonjour, je suis <span>Adja Abibatou Diop</span></h1>
+                <h2>Étudiante en génie logiciel et administration réseau</h2>
+                <p>Créative et rigoureuse, je transforme les idées en réalisations concrètes à travers des projets qui allient esthétique, fonctionnalité et sens.</p>
+                <a href="#projets" class="btn">Découvrir mes projets</a>
             </div>
-        </div>
-        </div>
+            <div class="home-img">
+                <img src="images/Abys profil.jpeg" alt="Portrait d'Adja Abibatou Diop">
+            </div>
+        </section>
+
+        <section id="apropos" class="about section-shell">
+            <div class="section-heading">
+                <p class="eyebrow">Ce que j'apprends</p>
+                <h2>Mes compétences</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill"><div class="skill-label"><span>HTML</span><span>90 %</span></div><div class="progress"><span class="progress-bar html"></span></div></div>
+                <div class="skill"><div class="skill-label"><span>CSS</span><span>70 %</span></div><div class="progress"><span class="progress-bar css"></span></div></div>
+                <div class="skill"><div class="skill-label"><span>Algorithmique</span><span>50 %</span></div><div class="progress"><span class="progress-bar algo"></span></div></div>
+                <div class="skill"><div class="skill-label"><span>Réseaux</span><span>65 %</span></div><div class="progress"><span class="progress-bar reseau"></span></div></div>
+                <div class="skill"><div class="skill-label"><span>Systèmes d'exploitation</span><span>60 %</span></div><div class="progress"><span class="progress-bar se"></span></div></div>
+                <div class="skill"><div class="skill-label"><span>Architecture des ordinateurs</span><span>55 %</span></div><div class="progress"><span class="progress-bar ado"></span></div></div>
+            </div>
+            <div class="about-content">
+                <div class="section-heading">
+                    <p class="eyebrow">Mon parcours</p>
+                    <h2>À propos de moi</h2>
+                </div>
+                <p class="intro-text">« Mon premier rêve portait une blouse blanche, mais c’est derrière un écran que j’ai trouvé ma véritable vocation. Aujourd'hui étudiante en <strong>Licence 1 de Génie Logiciel et Administration Réseau à l’ESTM Dakar</strong>, je ne subis pas mon parcours : je le réinvente. »</p>
+                <p class="intro-text">Je m'appelle <strong>Adja Abibatou Diop</strong>. On me dit perfectionniste, mais je préfère dire que je suis une conteuse de détails : pour moi, chaque ligne de code et chaque pixel doit raconter une histoire. Loin de regretter mon choix, je savoure cette alliance entre <strong>l'esthétique créative</strong> et <strong>la rigueur technique</strong> que m'offre l'informatique.</p>
+                <p class="intro-text">Mon chemin est encore long, mais mon ambition est sans limite. Portée par une curiosité audacieuse, je vois les bifurcations de la vie comme des tremplins et j'ai hâte de vous faire découvrir ma vision au fil de mes projets.</p>
+                <p class="cta-text">L’aventure ne fait que commencer. <em>Êtes-vous prêts à me suivre ?</em></p>
+            </div>
+        </section>
+
+        <section id="projets" class="projects section-shell">
+            <div class="section-heading">
+                <p class="eyebrow">Quelques réalisations</p>
+                <h2>Mes projets</h2>
+            </div>
+            <div class="cards">
+                <article class="card">
+                    <a class="project-image" href="https://adjaabibatoudiop-bit.github.io/Restaurant-le-gros-bidon/" target="_blank" rel="noopener noreferrer"><img src="images/Capture d’écran_14-3-2026_182122_127.0.0.1.jpeg" alt="Aperçu du site vitrine de restaurant" loading="lazy"></a>
+                    <div class="card-content"><h3>Site vitrine de restaurant</h3><div class="tags"><span>HTML</span><span>CSS</span></div><p>Un site vitrine pour mettre en valeur les plats, l’identité et les informations pratiques d’un restaurant fictif.</p></div>
+                </article>
+                <article class="card">
+                    <a class="project-image" href="https://adjaabyba.github.io/application13/" target="_blank" rel="noopener noreferrer"><img src="images/Application 13.jpeg" alt="Aperçu d'une page éducative sur le cloud" loading="lazy"></a>
+                    <div class="card-content"><h3>Comprendre le cloud</h3><div class="tags"><span>HTML</span><span>CSS</span></div><p>Une page éducative qui explique le cloud computing et le stockage en nuage avec une présentation claire et accessible.</p></div>
+                </article>
+                <article class="card">
+                    <a class="project-image" href="https://adjaabyba.github.io/application-12/" target="_blank" rel="noopener noreferrer"><img src="images/apply 12.jpeg" alt="Aperçu d'une page éducative sur l'intelligence artificielle" loading="lazy"></a>
+                    <div class="card-content"><h3>Découvrir l’intelligence artificielle</h3><div class="tags"><span>HTML</span></div><p>Une page éducative consacrée aux applications de l’intelligence artificielle et aux enjeux éthiques et sociaux associés.</p></div>
+                </article>
+                <article class="card">
+                    <a class="project-image" href="https://adjaabyba.github.io/mon-march-local/" target="_blank" rel="noopener noreferrer"><img src="images/Marché local.jpeg" alt="Aperçu d'une boutique de produits sénégalais" loading="lazy"></a>
+                    <div class="card-content"><h3>Marché local</h3><div class="tags"><span>HTML</span><span>CSS</span></div><p>Une plateforme qui valorise les produits sénégalais et invite à découvrir les articles locaux.</p></div>
+                </article>
+            </div>
+        </section>
+
+        <section id="formations" class="education section-shell">
+            <div class="section-heading">
+                <p class="eyebrow">Études et évolution</p>
+                <h2>Mon parcours</h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline-item"><span class="date">2024</span><div class="timeline-content"><h3>Obtention du baccalauréat</h3><p>J'ai obtenu mon baccalauréat à l'école Khadimou Rassoul, première étape de mon parcours dans l'enseignement supérieur.</p></div></article>
+                <article class="timeline-item"><span class="date">2025</span><div class="timeline-content"><h3>Début de mon parcours universitaire</h3><p>Je me suis inscrite à l'UNCHK en biologie moléculaire et bio-informatique, mais par la suite je me suis orientée vers le droit informatique.</p></div></article>
+                <article class="timeline-item"><span class="date">2026</span><div class="timeline-content"><h3>Licence 2 en cours — ESTM et UNCHK</h3><p>Je poursuis une Licence 2 en Génie Logiciel et Administration Réseau à l'ESTM, ainsi qu'en droit informatique (LegalTech) à l'UNCHK.</p></div></article>
+            </div>
+        </section>
+
+        <section id="contact" class="contact section-shell">
+            <div class="section-heading">
+                <p class="eyebrow">Parlons de votre idée</p>
+                <h2>Contactez-moi</h2>
+                <p>Une question ou une collaboration en tête ? Envoyez-moi un message.</p>
+            </div>
+            <form id="contact-form">
+                <div class="form-row"><label for="nom">Nom</label><input id="nom" name="nom" type="text" placeholder="Votre nom" required></div>
+                <div class="form-row"><label for="email">E-mail</label><input id="email" name="email" type="email" placeholder="vous@exemple.com" required></div>
+                <div class="form-row"><label for="sujet">Sujet</label><select id="sujet" name="sujet"><option value="">Choisir un sujet</option><option>Développement web</option><option>Informatique</option><option>Autre</option></select></div>
+                <div class="form-row"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea></div>
+                <button class="btn" type="submit">Envoyer le message</button>
+            </form>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            <div class="social-media" aria-label="Réseaux sociaux">
+                <a href="mailto:adjaabibatou.diopp@gmail.com" aria-label="Envoyer un e-mail à Adja Abibatou Diop"><i class="bx bx-envelope"></i></a>
+                <a href="https://www.instagram.com/habiibatou.d/" target="_blank" rel="noopener noreferrer" aria-label="Instagram — Habiibatou Diop"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/adja-abibatou-d-165659215/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — Adja Abibatou Diop"><i class="bx bxl-linkedin"></i></a>
+            </div>
+        </section>
+    </main>
+    <footer><p>© 2026 Adja Abibatou Diop. Tous droits réservés.</p><a href="#accueil">Retour en haut ↑</a></footer>
+</body>
+</html>
 
     </section>
